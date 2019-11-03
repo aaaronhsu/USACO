@@ -4,5 +4,6 @@ public class github {
     System.out.println("This is a test");
     System.out.println("idk what to do");
     System.out.println("why");
+    System.out.println("why not");
   }
 }
