@@ -54,7 +54,7 @@ public class badmilk {
 
     Set<Integer> holder = new HashSet<>();
 
-    for(int i = 0; i < contaminated.length; i++) {
+    for(int i = 0; i < contaminated.length; i++) 
       for(int a = 0; a < contaminated[i].length; a++) {
         holder.add(contaminated[i][a]);
       }
@@ -87,6 +87,5 @@ public class badmilk {
     output.write(Integer.toString(highest));
     output.close();
   }
-
 
 }
