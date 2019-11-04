@@ -1,6 +1,8 @@
 import java.util.*;
 import java.io.*;
 
+// COMPLETE 10/10
+
 public class lifeguards {
   public static void main(String[] args) throws FileNotFoundException{
     Scanner input = new Scanner(new File("lifeguards.in"));
@@ -39,7 +41,7 @@ public class lifeguards {
           sum++;
         }
       }
-      
+
       remainingShifts[a] = sum;
       sum = 0;
       temp = shifts.clone();

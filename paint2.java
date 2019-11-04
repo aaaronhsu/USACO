@@ -1,6 +1,8 @@
 import java.util.*;
 import java.io.*;
 
+// COMPLETE 10/10
+
 public class paint2 {
   public static void main(String[] args) throws FileNotFoundException {
 

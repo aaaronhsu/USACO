@@ -1,6 +1,8 @@
 import java.util.*;
 import java.io.*;
 
+// COMPLETE 10/10
+
 public class badmilk {
   public static void main(String[] args) throws FileNotFoundException{
     Scanner input = new Scanner(new File("badmilk.in"));
@@ -54,7 +56,7 @@ public class badmilk {
 
     Set<Integer> holder = new HashSet<>();
 
-    for(int i = 0; i < contaminated.length; i++) 
+    for(int i = 0; i < contaminated.length; i++)
       for(int a = 0; a < contaminated[i].length; a++) {
         holder.add(contaminated[i][a]);
       }

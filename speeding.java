@@ -1,6 +1,8 @@
 import java.util.*;
 import java.io.*;
 
+// COMPLETE 10/10
+
 public class speeding {
   public static void main(String[] args) throws FileNotFoundException{
     Scanner input = new Scanner(new File("speeding.in"));
