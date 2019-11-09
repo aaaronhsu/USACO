@@ -1,6 +1,6 @@
 import java.util.*;
 import java.io.*;
-
+// 10/10
 public class blist {
   public static void main(String[] args) throws FileNotFoundException{
     Scanner input = new Scanner(new File("blist.in"));

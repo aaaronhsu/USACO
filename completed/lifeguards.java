@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-// COMPLETE 10/10
+// 10/10
 
 public class lifeguards {
   public static void main(String[] args) throws FileNotFoundException{
