@@ -38,21 +38,21 @@ public class outofplace {
     int duplicates = 0;
 
     if(finalPosition < position) {
-    for(int i = finalPosition + 1; i < position; i++) {
-      if(previous == mixed[i]) {
-        duplicates++;
+      for(int i = finalPosition + 1; i < position; i++) {
+        if(previous == mixed[i]) {
+          duplicates++;
+        }
+        previous = mixed[i];
       }
-      previous = mixed[i];
     }
-  }
-  else {
-    for(int i = finalPosition + 1; i > position; i--) {
-      if(previous == mixed[i]) {
-        duplicates++;
+    else {
+      for(int i = finalPosition + 1; i > position; i--) {
+        if(previous == mixed[i]) {
+          duplicates++;
+        }
+        previous = mixed[i];
       }
-      previous = mixed[i];
     }
-  }
 
     int moves = position - finalPosition - duplicates;
 
