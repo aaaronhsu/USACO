@@ -23,3 +23,5 @@ public class testing {
 
   }
 }
+
+// https://www.geeksforgeeks.org/send-email-using-java-program/
