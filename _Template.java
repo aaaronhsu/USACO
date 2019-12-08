@@ -8,6 +8,5 @@ public class {
 
     // Start code here
 
-
   }
 }
