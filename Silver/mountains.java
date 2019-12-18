@@ -38,7 +38,7 @@ public class mountains {
   }
 
   static int[] fill(int x, int y, int[] height) {
-    int leftY = y;
+    int leftY = x;
     int rightY = y;
 
     int counter = 0;
