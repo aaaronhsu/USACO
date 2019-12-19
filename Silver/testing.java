@@ -1,14 +1,18 @@
-class testing {
-  public static void main(String[] args) {
-    System.out.println(sure(10) + );
-  }
+import java.io.*;
+import java.util.*;
 
-  static String sure(int counter) {
-    if(counter == 0) {
-      return "are u sure";
-    }
-    else {
-      return sure(counter--) + " that you're sure";
-    }
+public class testing {
+  public static void main(String[] args) throws FileNotFoundException {
+    Scanner input = new Scanner(new File("dog.in"));
+    PrintWriter output = new PrintWriter(new File("dog.out"));
+
+    // Start code here
+    int read = input.nextInt();
+
+    System.out.println(read); // prints 5
+
+    output.println(read); // creates a file named dog.out and writes 5
+    output.close(); // need to close to finish writing file
+
   }
 }

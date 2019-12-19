@@ -20,38 +20,35 @@ public class cownomics {
       plain[i] = input.next();
     }
 
-    List<Integer> potential = new ArrayList<>();
-
-    boolean isEqual = true;
-    for(int i = 0; i < seqLength; i++) {
-      for(int a = 0; a < cows - 1; a++) {
-        if(plain[a].charAt(i) != plain[a + 1].charAt(i)) {
-          isEqual = false;
-          break;
-        }
-      }
-
-      if(!isEqual) {
-        potential.add(i);
-      }
-    }
-
-    boolean potentialGenome = true;
     int ans = 0;
-    for(int a : potential) {
-      for(int i = 0; i < cows - 1; i++) {
-        if(spotted[i].charAt(a) == spotted[i + 1].charAt(a)) {
-          potentialGenome = false;
+    boolean noMatches = true;
+
+    List<Character> potential = new ArrayList<>();
+
+    for(int i = 0; i < seqLength; i++) {
+      for(int cow = 0; cow < cows; cow++) {
+        potential.add(plain[cow].charAt(i));
+
+        if(potential.contains("a") && potential.contains("t") && potential.contains("g") && potential.contains("c")) {
           break;
         }
       }
 
-      if(potentialGenome) {
+      for(int cow = 0; cow < cows; cow++) {
+        if(potential.contains(spotted[cow].charAt(i))) {
+            noMatches = false;
+            break;
+        }
+      }
+
+      if(noMatches) {
         ans++;
       }
-
-      potentialGenome = true;
+      noMatches = true;
+      potential.clear();
     }
+
+
 
     output.println(ans);
     output.close();
