@@ -12,27 +12,27 @@ public class baseball {
     int[] cows = new int[n];
 
     for(int i = 0; i < n; i++) {
-      cows[i] - input.nextInt();
+      cows[i] = input.nextInt();
     }
 
     Arrays.sort(cows);
 
-    int low = (cows[cows.length - 1] - cows[0]) / 3;
-    int high = (cows[cows.length - 1] - cows[0] - 1) / 2;
+    int ans = 0;
 
-    int indexLow = high(cows, low);
-    int indexHigh = low(cows, high);
+   for(int i = 0; i < cows.length - 1; i++) {
+     for(int a = i + 1; a < cows.length; a++) {
+       int l = (2 * cows[a]) - cows[i];
+       int h = 2 * (cows[a] - cows[i]) + cows[a];
 
-    for(int i = indexLow; i < indexHigh; i++) {
-      int nLow = cows[i]
-    }
-    // {1, 3, 4, 5, 6, 7, 10}
-    // low = 3 (1) [5, 7]
-    // high = 4 (2) []
-    //
-    // 2 - 1 + 1
+       ans += low(cows, h) - high(cows, l) + 1;
+
+     }
+   }
 
 
+    output.println(ans);
+    output.close();
+    input.close();
   }
 
   static int low(int[] arr, int target) {
@@ -67,5 +67,3 @@ public class baseball {
 		return low;
 	}
 }
-
-O(n + logn)
