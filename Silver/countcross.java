@@ -39,6 +39,7 @@ public class countcross {
     fields[r1][c1].blockedRight = true;
     fields[r2][c2].blockedLeft = true;
    }
+
   }
 
 

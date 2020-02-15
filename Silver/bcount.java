@@ -10,33 +10,26 @@ public class bcount {
     int n = input.nextInt();
     int q = input.nextInt();
 
-    int[] cows = new int[n];
+    int[] c = new int[n + 1];
+    int[] co = new int[n + 1];
+    int[] cow = new int[n + 1];
 
-    for(int i = 0; i < n; i++) {
-      cows[i] = input.nextInt();
-    }
+    for(int i = 1; i < n + 1; i++) {
+      int hold = input.nextInt();
+      c[i] = c[i - 1];
+      co[i] = co[i - 1];
+      cow[i] = cow[i - 1];
 
-
-    int[][] ans = new int[q][3];
-
-    for(int i = 0; i < q; i++) {
-      int t = input.nextInt();
-      int p = input.nextInt();
-      for(int a = t - 1; a <= p - 1; a++) {
-        if(cows[a] == 1) {
-          ans[i][0]++;
-        }
-        else if(cows[a] == 2) {
-          ans[i][1]++;
-        }
-        else {
-          ans[i][2]++;
-        }
-      }
+      if(hold == 1) c[i]++;
+      else if (hold == 2) co[i]++;
+      else cow[i]++;
     }
 
     for(int i = 0; i < q; i++) {
-      output.println(ans[i][0] + " " + ans[i][1] + " " + ans[i][2]);
+      int l = input.nextInt();
+      int h = input.nextInt();
+      System.out.println(c[h]);
+      output.println((c[h] - c[l - 1]) + " " + (co[h] - co[l - 1]) + " " + (cow[h] - cow[l - 1]));
     }
 
     output.close();
