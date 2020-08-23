@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class bcount {
+public class bount {
   public static void main(String[] args) throws FileNotFoundException {
     Scanner input = new Scanner(new File("bcount.in"));
     PrintWriter output = new PrintWriter(new File("bcount.out"));

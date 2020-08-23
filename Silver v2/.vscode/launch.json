@@ -1,0 +1,147 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - paintbarn",
+			"request": "launch",
+			"mainClass": "paintbarn",
+			"projectName": "Silver v2_939948ce"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - countcross",
+			"request": "launch",
+			"mainClass": "countcross",
+			"projectName": "Silver v2_939948ce"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - homework",
+			"request": "launch",
+			"mainClass": "homework",
+			"projectName": "Silver v2_939948ce"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - cbarn",
+			"request": "launch",
+			"mainClass": "cbarn",
+			"projectName": "Silver v2_939948ce"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - pails",
+			"request": "launch",
+			"mainClass": "pails",
+			"projectName": "Silver v2_939948ce"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - multimoo",
+			"request": "launch",
+			"mainClass": "multimoo",
+			"projectName": "Silver v2_939948ce"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - testing",
+			"request": "launch",
+			"mainClass": "testing",
+			"projectName": "Silver v2_939948ce"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - diamond",
+			"request": "launch",
+			"mainClass": "diamond",
+			"projectName": "Silver v2_939948ce"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - reduce2",
+			"request": "launch",
+			"mainClass": "reduce2",
+			"projectName": "Silver v2_939948ce"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - closing",
+			"request": "launch",
+			"mainClass": "closing",
+			"projectName": "Silver v2_939948ce"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - closing2",
+			"request": "launch",
+			"mainClass": "closing2",
+			"projectName": "Silver v2_939948ce"
+		},
+		{
+			"type": "java",
+			"name": "Debug (Launch) - Current File",
+			"request": "launch",
+			"mainClass": "${file}"
+		},
+		{
+			"type": "java",
+			"name": "Debug (Launch)-angry<Silver v2_939948ce>",
+			"request": "launch",
+			"mainClass": "angry",
+			"projectName": "Silver v2_939948ce"
+		},
+		{
+			"type": "java",
+			"name": "Debug (Launch)-cereal<Silver v2_939948ce>",
+			"request": "launch",
+			"mainClass": "cereal",
+			"projectName": "Silver v2_939948ce"
+		},
+		{
+			"type": "java",
+			"name": "Debug (Launch)-haybales<Silver v2_939948ce>",
+			"request": "launch",
+			"mainClass": "haybales",
+			"projectName": "Silver v2_939948ce"
+		},
+		{
+			"type": "java",
+			"name": "Debug (Launch)-moocast<Silver v2_939948ce>",
+			"request": "launch",
+			"mainClass": "moocast",
+			"projectName": "Silver v2_939948ce"
+		},
+		{
+			"type": "java",
+			"name": "Debug (Launch)-moop<Silver v2_939948ce>",
+			"request": "launch",
+			"mainClass": "moop",
+			"projectName": "Silver v2_939948ce"
+		},
+		{
+			"type": "java",
+			"name": "Debug (Launch)-perimeter<Silver v2_939948ce>",
+			"request": "launch",
+			"mainClass": "perimeter",
+			"projectName": "Silver v2_939948ce"
+		},
+		{
+			"type": "java",
+			"name": "Debug (Launch)-planting<Silver v2_939948ce>",
+			"request": "launch",
+			"mainClass": "planting",
+			"projectName": "Silver v2_939948ce"
+		},
+		{
+			"type": "java",
+			"name": "Debug (Launch)-wormsort<Silver v2_939948ce>",
+			"request": "launch",
+			"mainClass": "wormsort",
+			"projectName": "Silver v2_939948ce"
+		}
+	]
+}
