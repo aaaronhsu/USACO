@@ -22,7 +22,9 @@ public class stringTokenizer {
 	public static void main(String[] args) throws Exception {
 		in = new StreamTokenizer(new BufferedReader(new FileReader("input.in")));
 		PrintWriter out = new PrintWriter(new File("output.out"));
-		String N = next();
+		String str = next();
+		int n = nextInt();
+		int l = nextLong();
 		System.out.println(N);
 	}
 }
