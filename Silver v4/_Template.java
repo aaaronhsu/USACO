@@ -4,17 +4,17 @@ import java.io.*;
 public class _Template {
 	static StreamTokenizer in;
 	
-	static int nextInt() throws Exception{
+	static int nextInt() throws Exception {
 		in.nextToken();
 		return (int) in.nval;
 	}
 
-	static String next() throws Exception{
+	static String next() throws Exception {
 		in.nextToken();
 		return (String) in.sval;
 	}
 	
-	static long nextLong() throws Exception{
+	static long nextLong() throws Exception {
 		in.nextToken();
 		return (long) in.nval;
 	}

@@ -43,6 +43,9 @@ public class sort {
 			if(a.x == b.x) return a.y - b.y;
 			return a.x - b.x;
 		});
+
+		// lambda notation for sorting int array
+		Arrays.sort(array, Comparator.comparingInt(o -> o[0]));
 	}
 
 

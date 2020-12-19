@@ -23,42 +23,87 @@ public class Revegetate2 {
 		int n = nextInt();
 		int m = nextInt();
 
-		LinkedList[] fields = new LinkedList[n];
-		seen = new boolean[n];
-
-		for (int i = 0; i < n; i++) {
-			fields[i] = new LinkedList<Integer>();
-		}
-
+		Node[] fields = new Node[m];
 		for (int i = 0; i < m; i++) {
-			next();
+			String hold = next();
 			int a = nextInt() - 1;
 			int b = nextInt() - 1;
 
-			fields[a].add(b);
-			fields[b].add(a);
+			fields[i] = new Node(a, b, hold);
 		}
 
+		int components = 0;
 
-		out.print(1);
+		boolean[] seen = new boolean[m];
+		int[] seed = new int[n];
+
 		for (int i = 0; i < n; i++) {
 			if (!seen[i]) {
-				dfs(i, fields);
-				out.print(0);
+				components++;
+
+				if (!dfs(i, fields, seed, 1)) {
+					out.println(0);
+					out.close();
+					break;
+				}
 			}
 		}
 
-		out.println();
+		StringBuilder str = new StringBuilder();
+
+		str.append(1);
+
+		for (int i = 0; i < components; i++) {
+			str.append(0);
+		}
+
+		out.println(str.toString());
 		out.close();
 	}
 
-	static void dfs(int current, LinkedList[] fields) {
-		if (seen[current]) return;
+	static boolean dfs(int current, Node[] fields, int[] seeds, int s) {
+		
+		if (seen[current]) {
+			if (fields[current].type == 0) {
+				// same
 
-		seen[current] = true;
+				if (seeds[fields[current].a] != s) return false;
+			}
+			else {
+				// diff
 
-		for (int i : (LinkedList<Integer>) fields[current]) {
-			dfs(i, fields);
+				if (seeds[fields[current].a] == seeds[fields[current].b]) return false;
+			}
+		}
+
+		seen[fields[current].a] = true;
+		seen[fields[current].b] = true;
+
+		if (fields[current].type == 0) {
+			// same
+
+			seeds[fields[current].a] = 1;
+			seeds[fields[current].b] = 1;
+		}
+		else {
+			// diff
+			seeds[fields[current].a] = 1;
+			seeds[fields[current].b] = 2;
+		}
+
+		return dfs(fields[current].a, fields, seeds, s);
+	}
+
+	static class Node {
+		int a, b;
+		int type = 0;
+
+		Node (int a, int b, String type) {
+			this.a = a;
+			this.b = b;
+			if (type.equals("D")) {
+				this.type = 1;
+			}
 		}
 	}
 }

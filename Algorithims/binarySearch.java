@@ -1,60 +1,84 @@
 
 public class binarySearch {
     public static void main(String[] args) {
-		int[] arr = {1, 5, 6, 7, 12, 15, 17};
-		int target = 11;
+		int[] arr = {2, 3, 5};
+		int target = 1;
 
-		System.out.println(search(arr, target));
+		System.out.println(high(arr, target));
 	}
 
     // logn
-	static int search(int[] arr, int target) {
-		int low = 0;
-		int high = arr.length - 1;
-
-		while (low <= high) {
-			int middle = (high + low) / 2;
-
-			if (arr[middle] == target) return middle;
-			else if (arr[middle] > target) high = middle - 1;
-			else low = middle + 1;
-		}
-
-		return -1;
-	}
-
-
-    // logn
-	static int high(int[] arr, int target) {
-		int low = 0;
-		int high = arr.length - 1;
-
-		while (high - low != 1) {
-			int middle = (high + low) / 2;
-
-			if (arr[middle] == target) return middle;
-			else if (arr[middle] > target) high = middle;
-			else low = middle;
-		}
-
-		if (arr[low] == target) return low;
-		else return high;
-	}
+	static int search(int arr[], int target) 
+    { 
+        int l = 0, r = arr.length - 1; 
+        while (l <= r) { 
+            int m = l + (r - l) / 2; 
+  
+            // Check if x is present at mid 
+            if (arr[m] == target) 
+                return m; 
+  
+            // If x greater, ignore left half 
+            if (arr[m] < target) 
+                l = m + 1; 
+  
+            // If x is smaller, ignore right half 
+            else
+                r = m - 1; 
+        } 
+  
+        // if we reach here, then element was 
+		// not present 
+        return -1; 
+    } 
 
     // logn
-	static int low(int[] arr, int target) {
-		int low = 0;
-		int high = arr.length - 1;
+	static int high(int arr[], int target) 
+    { 
+        int l = 0, r = arr.length - 1; 
+        while (l <= r) { 
+            int m = l + (r - l) / 2; 
+  
+            // Check if x is present at mid 
+            if (arr[m] == target) 
+                return m; 
+  
+            // If x greater, ignore left half 
+            if (arr[m] < target) 
+                l = m + 1; 
+  
+            // If x is smaller, ignore right half 
+            else
+                r = m - 1; 
+        } 
+  
+        // if we reach here, then element was 
+		// not present 
+        return l; 
+    } 
 
-		while (high - low != 1) {
-			int middle = (high + low) / 2;
-
-			if (arr[middle] == target) return middle;
-			else if (arr[middle] > target) high = middle;
-			else low = middle;
-		}
-
-		if (arr[high] == target) return high;
-		else return low;
-	}
+    // logn
+	static int low(int arr[], int target) 
+    { 
+        int l = 0, r = arr.length - 1; 
+        while (l <= r) { 
+            int m = l + (r - l) / 2; 
+  
+            // Check if x is present at mid 
+            if (arr[m] == target) 
+                return m; 
+  
+            // If x greater, ignore left half 
+            if (arr[m] < target) 
+                l = m + 1; 
+  
+            // If x is smaller, ignore right half 
+            else
+                r = m - 1; 
+        } 
+  
+        // if we reach here, then element was 
+		// not present 
+        return r; 
+    } 
 }
