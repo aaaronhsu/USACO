@@ -45,6 +45,6 @@ public class Cowdance {
 	static boolean works(int k, int t, int[] cows) {
 		int currentTime = 0;
 		
-		
+		return false;
 	}
 }

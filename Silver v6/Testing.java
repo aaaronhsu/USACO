@@ -3,10 +3,11 @@ import java.io.*;
 
 public class Testing {
 	public static void main(String[] args) {
-		LinkedList<Integer> test = new LinkedList<>();
+		Integer[] test = new Integer[5];
 
-		test.add(1);
+		test[0] = 5;
+		test[1] = 123;
 
-		System.out.println(Collections.binarySearch(test, 2));
+		System.out.println(test[0] + test[1]);
 	}
 }
